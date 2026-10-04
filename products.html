@@ -5,6 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Our Products | North Star Bakery</title>
 <link rel="stylesheet" href="css/style.css">
+<script src="js/main.js" defer></script>
 </head>
 <body>
 <header>
@@ -22,6 +23,28 @@
 <main>
 <h1>Good things from our ovens</h1>
 <p>Everything is made in small batches at the bakery. Availability changes with the season; ask us what’s fresh today or send a request ahead of your visit.</p>
+<section class="order-builder">
+  <h2>Build a pre-order list</h2>
+
+  <label for="product-choice">Choose an item</label>
+  <select id="product-choice">
+    <option value="">Choose a baked good</option>
+    <option value="Country sourdough loaf">Country sourdough loaf</option>
+    <option value="Seeded wheat loaf">Seeded wheat loaf</option>
+    <option value="Soft sandwich loaf">Soft sandwich loaf</option>
+    <option value="Butter croissant">Butter croissant</option>
+    <option value="Fruit hand pie">Fruit hand pie</option>
+    <option value="Cinnamon bun">Cinnamon bun</option>
+    <option value="Celebration cake">Celebration cake</option>
+  </select>
+
+  <label for="product-quantity">Quantity</label>
+  <input type="number" id="product-quantity" min="1" max="20" value="1">
+
+  <button type="button" id="add-to-order">Add to request</button>
+  <p id="order-feedback" aria-live="polite"></p>
+  <ul id="order-list"></ul>
+</section>
 <section>
 <h2>Breads</h2>
 <img src="images/bakery-bread.png" alt="Freshly baked artisan breads ready to share">

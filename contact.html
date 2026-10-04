@@ -5,6 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Contact &amp; Pre-orders | North Star Bakery</title>
 <link rel="stylesheet" href="css/style.css">
+<script src="js/main.js" defer></script>
 </head>
 <body>
 <header>
@@ -22,7 +23,7 @@
 <main>
 <h1>Let’s plan something delicious</h1>
 <p>Use this form to ask a question or request a pre-order. We’ll follow up to confirm details, availability, and pricing. Please send celebration cake requests at least one week ahead when possible.</p>
-<form action="#" method="post">
+<form action="#" method="post" id="contact-form">
 <fieldset>
 <legend>Your details</legend>
 <p>
@@ -46,16 +47,16 @@
 </p>
 <p>
 <label for="pickup-date">Preferred pickup date</label><br>
-<input type="date" id="pickup-date" name="pickup-date">
+<input type="date" id="pickup-date" name="pickup-date" required>
 </p>
 <p>
-<label for="message">Your message or order details</label><br>
-<textarea id="message" name="message" rows="6" cols="40" required></textarea>
-</p>
+<label for="item-details">Your message or order details</label><br>
+<textarea id="item-details" name="item-details" rows="6" cols="40" required></textarea></p>
 </fieldset>
 <p>
 <button type="submit">Send Request</button>
 </p>
+<p id="form-feedback" aria-live="polite"></p>
 </form>
 <section>
 <h2>Visit the bakery</h2>
